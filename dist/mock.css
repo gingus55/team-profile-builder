@@ -17,16 +17,17 @@ header {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  background-image: linear-gradient(to bottom right, blue, white);
+  background-image: linear-gradient(to bottom right, rgb(104, 104, 223), white);
   width: 200px;
   margin: 20px 10px;
 }
 
-.card-tittle {
+.card-title {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
+  font-size: 25px;
 }
 
 .card-info-container {
@@ -35,6 +36,11 @@ header {
   flex-wrap: wrap;
   justify-content: space-evenly;
   background-color: rgba(211, 199, 199, 0.849);
-  padding: 5px;
   margin: 10px;
+}
+
+.contacts {
+  padding: 5px 10px;
+  border-bottom: solid black 2px;
+  border-right: solid black 2px;
 }
