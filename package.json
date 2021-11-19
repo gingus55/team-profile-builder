@@ -20,5 +20,8 @@
   "homepage": "https://github.com/gingus55/team-profile-builder#readme",
   "dependencies": {
     "inquirer": "^8.2.0"
+  },
+  "devDependencies": {
+    "jest": "^27.3.1"
   }
 }
