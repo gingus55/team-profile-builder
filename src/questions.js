@@ -1,22 +1,22 @@
 const initialQuestions = [
   {
     type: "input",
-    name: "manager",
+    name: "name",
     message: "Enter your team manager name:",
   },
   {
     type: "input",
-    name: "managerId",
+    name: "id",
     message: "Enter your employer ID:",
   },
   {
     type: "input",
-    name: "managerEmail",
+    name: "email",
     message: "Enter your email address:",
   },
   {
     type: "input",
-    name: "managerOffice",
+    name: "office",
     message: "Enter your office number:",
   },
   {
@@ -47,22 +47,22 @@ const initialQuestions = [
 const internQuestions = [
   {
     type: "input",
-    name: "internName",
+    name: "name",
     message: "Enter your interns name:",
   },
   {
     type: "input",
-    name: "internId",
+    name: "id",
     message: "Enter your interns ID:",
   },
   {
     type: "input",
-    name: "internEmail",
+    name: "email",
     message: "Enter your interns email address:",
   },
   {
     type: "input",
-    name: "internSchool",
+    name: "school",
     message: "Enter your interns school:",
   },
   {
@@ -93,17 +93,17 @@ const internQuestions = [
 const engineerQuestions = [
   {
     type: "input",
-    name: "engineerName",
+    name: "name",
     message: "Enter your engineers name:",
   },
   {
     type: "input",
-    name: "engineerId",
+    name: "id",
     message: "Enter your engineers ID:",
   },
   {
     type: "input",
-    name: "engineerEmail",
+    name: "email",
     message: "Enter your engineers email address:",
   },
   {
@@ -139,22 +139,22 @@ const engineerQuestions = [
 const managerQuestions = [
   {
     type: "input",
-    name: "managerName",
+    name: "name",
     message: "Enter your managers name:",
   },
   {
     type: "input",
-    name: "managerId",
+    name: "id",
     message: "Enter your managers ID:",
   },
   {
     type: "input",
-    name: "managerEmail",
+    name: "email",
     message: "Enter your managers email address:",
   },
   {
     type: "input",
-    name: "managerOffice",
+    name: "office",
     message: "Enter your managers office number:",
   },
   {

@@ -6,9 +6,9 @@ const {
   engineerQuestions,
   managerQuestions,
 } = require("./questions");
-const { Intern } = require("../lib/Intern");
-const { Engineer } = require("../lib/Engineer");
-const { Manager } = require("../lib/Manager");
+const Intern = require("../lib/Intern");
+const Engineer = require("../lib/Engineer");
+const Manager = require("../lib/Manager");
 
 const start = async () => {
   let inProgress = true;
@@ -20,37 +20,40 @@ const start = async () => {
     // console.log(employeeArray);
 
     if (answers.member === "int") {
-      const { internName, internId, internEmail, internSchool } =
-        await inquirer.prompt(internQuestions);
+      const { name, id, email, school } = await inquirer.prompt(
+        internQuestions
+      );
       const intern = new Intern({
-        internName,
-        internId,
-        internEmail,
-        internSchool,
+        name,
+        id,
+        email,
+        school,
       });
       console.log(intern);
     }
 
     if (answers.member === "eng") {
-      const { engineerName, engineerId, engineerEmail, github } =
-        await inquirer.prompt(engineerQuestions);
+      const { name, id, email, github } = await inquirer.prompt(
+        engineerQuestions
+      );
       const engineer = new Engineer({
-        engineerName,
-        engineerId,
-        engineerEmail,
+        name,
+        id,
+        email,
         github,
       });
       console.log(engineer);
     }
 
     if (answers.member === "man") {
-      const { managerName, managerId, managerEmail, managerOffice } =
-        await inquirer.prompt(managerQuestions);
+      const { name, id, email, office } = await inquirer.prompt(
+        managerQuestions
+      );
       const manager = new Manager({
-        managerName,
-        managerId,
-        managerEmail,
-        managerOffice,
+        name,
+        id,
+        email,
+        office,
       });
       console.log(manager);
     }
