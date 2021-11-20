@@ -28,6 +28,7 @@ const start = async () => {
         internEmail,
         internSchool,
       });
+      console.log(intern);
     }
 
     if (answers.member === "eng") {
@@ -39,6 +40,7 @@ const start = async () => {
         engineerEmail,
         github,
       });
+      console.log(engineer);
     }
 
     if (answers.member === "man") {
@@ -50,6 +52,7 @@ const start = async () => {
         managerEmail,
         managerOffice,
       });
+      console.log(manager);
     }
 
     if (answers.member === "dfn") {
