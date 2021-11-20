@@ -9,35 +9,32 @@ const {
 
 const start = async () => {
   let inProgress = true;
+  let answers = await inquirer.prompt(initialQuestions);
+  const employeeArray = [];
 
   while (inProgress) {
-    let answers = await inquirer.prompt(initialQuestions);
-    const employeeArray = [];
     employeeArray.push(answers);
-    console.log(employeeArray);
+    // console.log(employeeArray);
 
     if (answers.member === "int") {
       answers = await inquirer.prompt(internQuestions);
-      employeeArray.push(answers);
-      console.log(employeeArray);
     }
 
     if (answers.member === "eng") {
-      const answers = await inquirer.prompt(engineerQuestions);
-      employeeArray.push(answers);
-      console.log(employeeArray);
+      answers = await inquirer.prompt(engineerQuestions);
     }
 
     if (answers.member === "man") {
-      const answers = await inquirer.prompt(managerQuestions);
+      answers = await inquirer.prompt(managerQuestions);
+    }
+
+    if (answers.member === "dfn") {
       employeeArray.push(answers);
-      console.log(employeeArray);
-    } else {
       inProgress = false;
     }
   }
 
-  // console.log(answers);
+  console.log(employeeArray);
   // if (answers.installationIncluded) {
   //   let active = true;
   //   while (active) {
