@@ -8,10 +8,36 @@ const {
 } = require("./questions");
 
 const start = async () => {
-  const answers = await inquirer.prompt(initialQuestions);
-  const employeeArray = [];
+  let inProgress = true;
 
-  console.log(answers);
+  while (inProgress) {
+    let answers = await inquirer.prompt(initialQuestions);
+    const employeeArray = [];
+    employeeArray.push(answers);
+    console.log(employeeArray);
+
+    if (answers.member === "int") {
+      answers = await inquirer.prompt(internQuestions);
+      employeeArray.push(answers);
+      console.log(employeeArray);
+    }
+
+    if (answers.member === "eng") {
+      const answers = await inquirer.prompt(engineerQuestions);
+      employeeArray.push(answers);
+      console.log(employeeArray);
+    }
+
+    if (answers.member === "man") {
+      const answers = await inquirer.prompt(managerQuestions);
+      employeeArray.push(answers);
+      console.log(employeeArray);
+    } else {
+      inProgress = false;
+    }
+  }
+
+  // console.log(answers);
   // if (answers.installationIncluded) {
   //   let active = true;
   //   while (active) {
