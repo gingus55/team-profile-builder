@@ -6,6 +6,9 @@ const {
   engineerQuestions,
   managerQuestions,
 } = require("./questions");
+const { Intern } = require("../lib/Intern");
+const { Engineer } = require("../lib/Engineer");
+const { Manager } = require("../lib/Manager");
 
 const start = async () => {
   let inProgress = true;
@@ -17,15 +20,36 @@ const start = async () => {
     // console.log(employeeArray);
 
     if (answers.member === "int") {
-      answers = await inquirer.prompt(internQuestions);
+      const { internName, internId, internEmail, internSchool } =
+        await inquirer.prompt(internQuestions);
+      const intern = new Intern({
+        internName,
+        internId,
+        internEmail,
+        internSchool,
+      });
     }
 
     if (answers.member === "eng") {
-      answers = await inquirer.prompt(engineerQuestions);
+      const { engineerName, engineerId, engineerEmail, github } =
+        await inquirer.prompt(engineerQuestions);
+      const engineer = new Engineer({
+        engineerName,
+        engineerId,
+        engineerEmail,
+        github,
+      });
     }
 
     if (answers.member === "man") {
-      answers = await inquirer.prompt(managerQuestions);
+      const { managerName, managerId, managerEmail, managerOffice } =
+        await inquirer.prompt(managerQuestions);
+      const manager = new Manager({
+        managerName,
+        managerId,
+        managerEmail,
+        managerOffice,
+      });
     }
 
     if (answers.member === "dfn") {
