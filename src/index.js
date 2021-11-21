@@ -67,10 +67,8 @@ const start = async () => {
   console.log(employeeArray);
 
   const html = buildPage(employeeArray);
-  console.log(html);
-  // const readmeDoc = writeReadme(readmeAnswers, instructionsArray);
 
-  // utilities.writeToFile("generatedREADME.md", readmeDoc);
+  utilities.writeToFile("generatedHTML.html", html);
 };
 
 start();

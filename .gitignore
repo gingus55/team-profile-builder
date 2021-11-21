@@ -135,3 +135,5 @@ typings/
 .tern-port
 
 package-lock.json
+
+generatedHTML.html
