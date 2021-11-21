@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const utilities = require("./utilities");
 const {
-  initialQuestions,
+  initialQuestion,
   internQuestions,
   engineerQuestions,
   managerQuestions,
@@ -9,16 +9,14 @@ const {
 const Intern = require("../lib/Intern");
 const Engineer = require("../lib/Engineer");
 const Manager = require("../lib/Manager");
+const buildPage = require("./writeHtml");
 
 const start = async () => {
   let inProgress = true;
-  let answers = await inquirer.prompt(initialQuestions);
+  let answers = await inquirer.prompt(initialQuestion);
   const employeeArray = [];
 
   while (inProgress) {
-    employeeArray.push(answers);
-    // console.log(employeeArray);
-
     if (answers.member === "int") {
       const { name, id, email, school } = await inquirer.prompt(
         internQuestions
@@ -29,7 +27,8 @@ const start = async () => {
         email,
         school,
       });
-      console.log(intern);
+      employeeArray.push(intern);
+      answers = await inquirer.prompt(initialQuestion);
     }
 
     if (answers.member === "eng") {
@@ -42,41 +41,33 @@ const start = async () => {
         email,
         github,
       });
-      console.log(engineer);
+      employeeArray.push(engineer);
+      answers = await inquirer.prompt(initialQuestion);
     }
 
     if (answers.member === "man") {
-      const { name, id, email, office } = await inquirer.prompt(
+      const { name, id, email, officeNumber } = await inquirer.prompt(
         managerQuestions
       );
       const manager = new Manager({
         name,
         id,
         email,
-        office,
+        officeNumber,
       });
-      console.log(manager);
+      employeeArray.push(manager);
+      answers = await inquirer.prompt(initialQuestion);
     }
 
     if (answers.member === "dfn") {
-      employeeArray.push(answers);
       inProgress = false;
     }
   }
 
   console.log(employeeArray);
-  // if (answers.installationIncluded) {
-  //   let active = true;
-  //   while (active) {
-  //     installationInstructions = await inquirer.prompt(installQuestions);
-  //     if (installationInstructions.continue) {
-  //       instructionsArray.push(installationInstructions.step);
-  //     } else {
-  //       instructionsArray.push(installationInstructions.step);
-  //       active = false;
-  //     }
-  //   }
-  // }
+
+  const html = buildPage(employeeArray);
+  console.log(html);
   // const readmeDoc = writeReadme(readmeAnswers, instructionsArray);
 
   // utilities.writeToFile("generatedREADME.md", readmeDoc);

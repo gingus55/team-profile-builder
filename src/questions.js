@@ -1,24 +1,4 @@
-const initialQuestions = [
-  {
-    type: "input",
-    name: "name",
-    message: "Enter your team manager name:",
-  },
-  {
-    type: "input",
-    name: "id",
-    message: "Enter your employer ID:",
-  },
-  {
-    type: "input",
-    name: "email",
-    message: "Enter your email address:",
-  },
-  {
-    type: "input",
-    name: "office",
-    message: "Enter your office number:",
-  },
+const initialQuestion = [
   {
     type: "list",
     name: "member",
@@ -65,29 +45,6 @@ const internQuestions = [
     name: "school",
     message: "Enter your interns school:",
   },
-  {
-    type: "list",
-    name: "member",
-    message: "Who would you like to add to your team?",
-    choices: [
-      {
-        name: "Engineer",
-        value: "eng",
-      },
-      {
-        name: "Manager",
-        value: "man",
-      },
-      {
-        name: "Intern",
-        value: "int",
-      },
-      {
-        name: "Done for now",
-        value: "dfn",
-      },
-    ],
-  },
 ];
 
 const engineerQuestions = [
@@ -111,29 +68,6 @@ const engineerQuestions = [
     name: "github",
     message: "Enter your engineers GitHub username:",
   },
-  {
-    type: "list",
-    name: "member",
-    message: "Who would you like to add to your team?",
-    choices: [
-      {
-        name: "Engineer",
-        value: "eng",
-      },
-      {
-        name: "Manager",
-        value: "man",
-      },
-      {
-        name: "Intern",
-        value: "int",
-      },
-      {
-        name: "Done for now",
-        value: "dfn",
-      },
-    ],
-  },
 ];
 
 const managerQuestions = [
@@ -154,36 +88,13 @@ const managerQuestions = [
   },
   {
     type: "input",
-    name: "office",
+    name: "officeNumber",
     message: "Enter your managers office number:",
-  },
-  {
-    type: "list",
-    name: "member",
-    message: "Who would you like to add to your team?",
-    choices: [
-      {
-        name: "Engineer",
-        value: "eng",
-      },
-      {
-        name: "Manager",
-        value: "man",
-      },
-      {
-        name: "Intern",
-        value: "int",
-      },
-      {
-        name: "Done for now",
-        value: "dfn",
-      },
-    ],
   },
 ];
 
 module.exports = {
-  initialQuestions,
+  initialQuestion,
   internQuestions,
   engineerQuestions,
   managerQuestions,
