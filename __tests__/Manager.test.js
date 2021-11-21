@@ -1,13 +1,42 @@
+const Manager = require("../lib/Manager");
+
 describe("Manager", () => {
-  test("should be an instance of Manager", () => {});
+  const bob = new Manager({
+    name: "bob",
+    id: "24",
+    email: "bobby",
+    officeNumber: "12",
+  });
 
-  test("should return the expected name", () => {});
+  test("should be an instance of Manager", () => {
+    expect(bob instanceof Manager).toBe(true);
+  });
 
-  test("should return the expected ID", () => {});
+  test(" getName should return the expected name", () => {
+    const expected = "bob";
+    const actual = bob.getName();
 
-  test("should return the expected email", () => {});
+    expect(actual).toEqual(expected);
+  });
 
-  test("should return the expected office number", () => {});
+  test("getId should return the expected ID", () => {
+    const expected = "24";
+    const actual = bob.getId();
 
-  test("should return the expected role", () => {});
+    expect(actual).toEqual(expected);
+  });
+
+  test("getEmail should return the expected email", () => {
+    const expected = "bobby";
+    const actual = bob.getEmail();
+
+    expect(actual).toEqual(expected);
+  });
+
+  test("getRole should return the expected role", () => {
+    const expected = "Manager";
+    const actual = bob.getRole();
+
+    expect(actual).toEqual(expected);
+  });
 });
