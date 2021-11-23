@@ -43,7 +43,7 @@ const buildEngineer = ({ name, id, email, github }) => `
         <div class="card-info-container">
           <div class="contacts">ID:${id}</div>
           <div class="contacts"><a href="mailto:${email}">Email: ${email}</a>/div>
-          <div class="contacts">GitHub Username:${github}</div>
+          <div class="contacts"><a href="https://github.com/${github}">GitHub Username:${github}</a></div>
         </div>
       </div>`;
 
