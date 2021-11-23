@@ -5,6 +5,7 @@ const {
   internQuestions,
   engineerQuestions,
   managerQuestions,
+  teamNameQuestion,
 } = require("./questions");
 const Intern = require("../lib/Intern");
 const Engineer = require("../lib/Engineer");
@@ -65,8 +66,10 @@ const start = async () => {
   }
 
   console.log(employeeArray);
+  const teamName = await inquirer.prompt(teamNameQuestion);
 
-  const html = buildPage(employeeArray);
+  console.log(teamName);
+  const html = buildPage(employeeArray, teamName);
 
   utilities.writeToFile("generatedHTML.html", html);
 };

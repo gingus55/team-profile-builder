@@ -2,7 +2,7 @@ const Manager = require("../lib/Manager");
 const Engineer = require("../lib/Engineer");
 const Intern = require("../lib/Intern");
 
-const buildStart = () => `
+const buildStart = ({ teamName }) => `
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,7 +13,7 @@ const buildStart = () => `
     <title>Document</title>
   </head>
   <body>
-    <header>Title</header>
+    <header>${teamName}</header>
     <main class="card-container">`;
 
 const buildEnd = () => `
@@ -42,7 +42,7 @@ const buildEngineer = ({ name, id, email, github }) => `
         </div>
         <div class="card-info-container">
           <div class="contacts">ID:${id}</div>
-          <div class="contacts"><a href="mailto:${email}">Email: ${email}</a>/div>
+          <div class="contacts"><a href="mailto:${email}">Email: ${email}</a></div>
           <div class="contacts"><a href="https://github.com/${github}">GitHub Username:${github}</a></div>
         </div>
       </div>`;
@@ -60,9 +60,9 @@ const buildIntern = ({ name, id, email, school }) => `
         </div>
       </div>`;
 
-const buildPage = (array) => {
+const buildPage = (array, teamName) => {
   // build entire page
-  const start = buildStart();
+  const start = buildStart(teamName);
 
   let htmlString = "";
 

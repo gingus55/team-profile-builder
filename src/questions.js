@@ -93,9 +93,18 @@ const managerQuestions = [
   },
 ];
 
+const teamNameQuestion = [
+  {
+    type: "input",
+    name: "teamName",
+    message: "Enter your team name:",
+  },
+];
+
 module.exports = {
   initialQuestion,
   internQuestions,
   engineerQuestions,
   managerQuestions,
+  teamNameQuestion,
 };
