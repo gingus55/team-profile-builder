@@ -1,8 +1,9 @@
 header {
   text-align: center;
-  background-image: linear-gradient(to bottom right, red, white);
   padding: 50px 20px;
-  font-size: 30px;
+  font-size: 35px;
+  font-weight: bolder;
+  border-bottom: groove;
 }
 
 .card-container {
@@ -17,9 +18,13 @@ header {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  background-image: linear-gradient(to bottom right, rgb(104, 104, 223), white);
-  width: 200px;
+  width: 220px;
   margin: 20px 10px;
+  border-bottom: solid;
+  border-right: solid;
+  border-left: solid thin;
+  border-top: solid thin;
+  text-align: left;
 }
 
 .card-title {
@@ -30,12 +35,17 @@ header {
   font-size: 25px;
 }
 
+#nameText {
+  font-weight: bolder;
+  font-size: larger;
+}
+
 .card-info-container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  background-color: rgba(211, 199, 199, 0.849);
+  background-color: rgba(245, 229, 229, 0.849);
   margin: 10px;
 }
 
