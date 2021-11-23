@@ -9,6 +9,7 @@ const buildStart = ({ teamName }) => `
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./fontawesome/css/all.css" rel="stylesheet">
     <link href="../dist/mock.css" rel="stylesheet" />
     <title>Document</title>
   </head>
@@ -24,8 +25,8 @@ const buildEnd = () => `
 const buildManager = ({ name, id, email, officeNumber }) => `
 <div class="card">
         <div class="card-title">
-          <div>${name}</div>
-          <div>Manager</div>
+          <div id="nameText">${name}</div>
+          <div><i class="fas fa-mug-hot"></i>Manager</div>
         </div>
         <div class="card-info-container">
           <div class="contacts">ID:${id}</div>
@@ -37,8 +38,8 @@ const buildManager = ({ name, id, email, officeNumber }) => `
 const buildEngineer = ({ name, id, email, github }) => `
 <div class="card">
         <div class="card-title">
-          <div>${name}</div>
-          <div>Engineer</div>
+          <div id="nameText">${name}</div>
+          <div><i class="fas fa-hard-hat"></i>Engineer</div>
         </div>
         <div class="card-info-container">
           <div class="contacts">ID:${id}</div>
@@ -50,8 +51,8 @@ const buildEngineer = ({ name, id, email, github }) => `
 const buildIntern = ({ name, id, email, school }) => `
 <div class="card">
         <div class="card-title">
-          <div>${name}</div>
-          <div>Intern</div>
+          <div id="nameText">${name}</div>
+          <div><i class="fas fa-graduation-cap"></i>Intern</div>
         </div>
         <div class="card-info-container">
           <div class="contacts">ID:${id}</div>
