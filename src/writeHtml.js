@@ -29,7 +29,7 @@ const buildManager = ({ name, id, email, officeNumber }) => `
         </div>
         <div class="card-info-container">
           <div class="contacts">ID:${id}</div>
-          <div class="contacts">Email:${email}</div>
+          <div class="contacts"><a href="mailto:${email}">Email: ${email}</a></div>
           <div class="contacts">Office:${officeNumber}</div>
         </div>
       </div>`;
@@ -42,7 +42,7 @@ const buildEngineer = ({ name, id, email, github }) => `
         </div>
         <div class="card-info-container">
           <div class="contacts">ID:${id}</div>
-          <div class="contacts">Email:${email}</div>
+          <div class="contacts"><a href="mailto:${email}">Email: ${email}</a>/div>
           <div class="contacts">GitHub Username:${github}</div>
         </div>
       </div>`;
@@ -55,7 +55,7 @@ const buildIntern = ({ name, id, email, school }) => `
         </div>
         <div class="card-info-container">
           <div class="contacts">ID:${id}</div>
-          <div class="contacts">Email:${email}</div>
+          <div class="contacts"><a href="mailto:${email}">Email: ${email}</a></div>
           <div class="contacts">School:${school}</div>
         </div>
       </div>`;
