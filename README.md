@@ -10,7 +10,7 @@ And located within dist/ folder
 
 # Link to video of application
 
-<a href="https://drive.google.com/file/d/1BSs_8YDbYA3zwrZTiHZbvnwXxYJiW2k4/view?usp=sharing">Video of application</a>
+<a href="https://drive.google.com/file/d/1KGCgSbP_8tewVnQbtAlZN28CyZJfX5Lf/view?usp=sharing">Video of application</a>
 
 # Team Profile Builder
 
