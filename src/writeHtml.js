@@ -9,7 +9,10 @@ const buildStart = ({ teamName }) => `
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./fontawesome/css/all.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;500&display=swap" rel="stylesheet">
+<link href="./fontawesome/css/all.css" rel="stylesheet">
     <link href="../dist/mock.css" rel="stylesheet" />
     <title>Document</title>
   </head>
@@ -29,9 +32,9 @@ const buildManager = ({ name, id, email, officeNumber }) => `
           <div><i class="fas fa-mug-hot"></i>Manager</div>
         </div>
         <div class="card-info-container">
-          <div class="contacts">ID:${id}</div>
-          <div class="contacts"><a href="mailto:${email}">Email: ${email}</a></div>
-          <div class="contacts">Office:${officeNumber}</div>
+          <div class="contacts">ID: ${id}</div>
+          <div class="contacts"><a href="mailto: ${email}">Email: ${email}</a></div>
+          <div class="contacts">Office: ${officeNumber}</div>
         </div>
       </div>`;
 
@@ -42,9 +45,9 @@ const buildEngineer = ({ name, id, email, github }) => `
           <div><i class="fas fa-hard-hat"></i>Engineer</div>
         </div>
         <div class="card-info-container">
-          <div class="contacts">ID:${id}</div>
+          <div class="contacts">ID: ${id}</div>
           <div class="contacts"><a href="mailto:${email}">Email: ${email}</a></div>
-          <div class="contacts"><a href="https://github.com/${github}">GitHub Username:${github}</a></div>
+          <div class="contacts"><a href="https://github.com/${github}">GitHub Username: ${github}</a></div>
         </div>
       </div>`;
 
@@ -55,9 +58,9 @@ const buildIntern = ({ name, id, email, school }) => `
           <div><i class="fas fa-graduation-cap"></i>Intern</div>
         </div>
         <div class="card-info-container">
-          <div class="contacts">ID:${id}</div>
+          <div class="contacts">ID: ${id}</div>
           <div class="contacts"><a href="mailto:${email}">Email: ${email}</a></div>
-          <div class="contacts">School:${school}</div>
+          <div class="contacts">School: ${school}</div>
         </div>
       </div>`;
 
