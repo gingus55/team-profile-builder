@@ -2,6 +2,12 @@
 
 https://github.com/gingus55/team-profile-builder
 
+# Link to sample HTML
+
+https://drive.google.com/file/d/16t1Q3wKOSxCeul9vLlzYMhbFTZJG7d2f/view?usp=sharing
+
+And located within dist/ folder
+
 # Link to video of application
 
 <a href="https://drive.google.com/file/d/1BSs_8YDbYA3zwrZTiHZbvnwXxYJiW2k4/view?usp=sharing">Video of application</a>
