@@ -1,0 +1,68 @@
+body {
+  font-family: "Outfit", sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  text-align: center;
+  padding: 50px 20px;
+  font-size: 35px;
+  font-weight: bolder;
+  border-bottom: groove;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 240px;
+  margin: 20px 10px;
+  border-bottom: solid;
+  border-right: solid;
+  border-left: solid thin;
+  border-top: solid thin;
+  border-radius: 8%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgb(114, 126, 233);
+  transform: translateX(4px);
+}
+
+.card-title {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 25px;
+  padding-left: 15px;
+}
+
+#nameText {
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.card-info-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 10px;
+  border-radius: 8%;
+}
+
+.contacts {
+  padding: 5px 10px;
+  border-bottom: solid black 2px;
+  border-right: solid black 2px;
+  margin: 10px;
+  border-radius: 8%;
+}
